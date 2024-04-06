@@ -1,0 +1,313 @@
+﻿
+@{
+    ViewData["Title"] = "Cricket";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button-111 {
+            font-family: Inter, sans-serif;
+            border-radius: 50px;
+            background-color: #76c9e7;
+            margin-top: 108px;
+            justify-content: center;
+            white-space: nowrap;
+            padding: 17px 21px;
+            cursor: pointer;
+            border: none;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.20s ease; /* Add transition for smooth hover effect */
+        }
+
+            .button-111:hover {
+                background-color: #096384; /* Change background color on hover */
+                transition: background-color 0.20s ease;
+                color: white;
+            }
+
+        .div {
+            background-color: var(--Color, #fff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 60px;
+        }
+
+        @@media (max-width: 991px) {
+            .div {
+                padding: 0 20px;
+            }
+        }
+
+        .div-2 {
+            display: flex;
+            margin-top: 115px;
+            width: 100%;
+            max-width: 1237px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @@media (max-width: 991px) {
+            .div-2 {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+        }
+
+        .img {
+            aspect-ratio: 1.52;
+            object-fit: auto;
+            object-position: center;
+            width: 1000px;
+            max-width: 100%;
+        }
+
+        .div-3 {
+            color: #000;
+            text-align: center;
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: #000;
+            margin-top: 36px;
+            font: 400 45px Lao Sans Pro, sans-serif;
+        }
+
+        @@media (max-width: 991px) {
+            .div-3 {
+                font-size: 40px;
+            }
+        }
+
+        .div-4 {
+            border-radius: 40px;
+            background-color: #aee8e5;
+            align-self: stretch;
+            margin-top: 51px;
+            justify-content: center;
+            color: #000;
+            letter-spacing: 0.6px;
+            padding: 15px 26px;
+            font: 600 20px Inter, sans-serif;
+        }
+
+        @@media (max-width: 991px) {
+            .div-4 {
+                max-width: 100%;
+                margin-top: 40px;
+                padding: 0 20px;
+            }
+        }
+
+        .div-5 {
+            align-self: stretch;
+            margin-top: 65px;
+        }
+
+        @@media (max-width: 991px) {
+            .div-5 {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+        }
+
+        .div-6 {
+            gap: 20px;
+            display: flex;
+        }
+
+        @@media (max-width: 991px) {
+            .div-6 {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0px;
+            }
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 55%;
+            margin-left: 0px;
+        }
+
+        @@media (max-width: 991px) {
+            .column {
+                width: 100%;
+            }
+        }
+
+        .div-7 {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            color: #000;
+        }
+
+        @@media (max-width: 991px) {
+            .div-7 {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+        }
+
+        .div-8 {
+            align-self: center;
+            font: 700 30px Inter, sans-serif;
+        }
+
+        .div-9 {
+            border-radius: 38px;
+            background-color: #aee8e5;
+            margin-top: 12px;
+            justify-content: center;
+            align-items: start;
+            padding: 17px 38px;
+            font: 600 18px Inter, sans-serif;
+        }
+
+        @@media (max-width: 991px) {
+            .div-9 {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+        .column-2 {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 45%;
+            margin-left: 20px;
+        }
+
+        @@media (max-width: 991px) {
+            .column-2 {
+                width: 100%;
+            }
+        }
+
+        .div-10 {
+            display: flex;
+            flex-direction: column;
+            color: #000;
+        }
+
+        @@media (max-width: 991px) {
+            .div-10 {
+                max-width: 100%;
+                margin-top: 40px;
+            }
+        }
+
+        .div-11 {
+            align-self: center;
+            white-space: nowrap;
+            font: 700 30px Inter, sans-serif;
+        }
+
+        @@media (max-width: 991px) {
+            .div-11 {
+                white-space: initial;
+            }
+        }
+
+        .div-12 {
+            border-radius: 38px;
+            background-color: #aee8e5;
+            margin-top: 43px;
+            justify-content: center;
+            padding: 34px 48px 34px 13px;
+            font: 600 20px Inter, sans-serif;
+        }
+
+        @@media (max-width: 991px) {
+            .div-12 {
+                max-width: 100%;
+                padding-right: 20px;
+                margin-top: 40px;
+            }
+        }
+
+        .div-13 {
+            border-radius: 51px;
+            background-color: #5c9b98;
+            margin-top: 119px;
+            width: 308px;
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+            color: #000;
+            padding: 20px 60px;
+            font: 600 40px Inter, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div class="div-2">
+            <img loading="lazy"
+                 srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/69a7e81fdafeaa534fa83ef6e95bc651a8ba67f9774222e37e976ec6289be216?apiKey=d2581b71f9e743e5a873bc096891baa6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/69a7e81fdafeaa534fa83ef6e95bc651a8ba67f9774222e37e976ec6289be216?apiKey=d2581b71f9e743e5a873bc096891baa6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/69a7e81fdafeaa534fa83ef6e95bc651a8ba67f9774222e37e976ec6289be216?apiKey=d2581b71f9e743e5a873bc096891baa6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/69a7e81fdafeaa534fa83ef6e95bc651a8ba67f9774222e37e976ec6289be216?apiKey=d2581b71f9e743e5a873bc096891baa6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/69a7e81fdafeaa534fa83ef6e95bc651a8ba67f9774222e37e976ec6289be216?apiKey=d2581b71f9e743e5a873bc096891baa6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/69a7e81fdafeaa534fa83ef6e95bc651a8ba67f9774222e37e976ec6289be216?apiKey=d2581b71f9e743e5a873bc096891baa6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/69a7e81fdafeaa534fa83ef6e95bc651a8ba67f9774222e37e976ec6289be216?apiKey=d2581b71f9e743e5a873bc096891baa6&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/69a7e81fdafeaa534fa83ef6e95bc651a8ba67f9774222e37e976ec6289be216?apiKey=d2581b71f9e743e5a873bc096891baa6&"
+                 class="img" />
+            <div class="div-3">CRICKET</div>
+            <div class="div-4">
+                Cricket, a strategic sport played between two teams, combines elegance and
+                skill on a green field with iconic stumps and bails. From boundary-scoring
+                brilliance to dramatic dismissals, it captivates global audiences with its
+                timeless appeal. Legends like Sachin Tendulkar and thrilling tournaments
+                like the World Cup further elevate cricket as a beloved and unifying
+                global passion
+            </div>
+            <div class="div-5">
+                <div class="div-6">
+                    <div class="column">
+                        <div class="div-7">
+                            <div class="div-8">Rules of Club</div>
+                            <div class="div-9">
+                                Any one who are joining the club must have to follow the rules of
+                                the club.
+                                <br />
+                                <br />
+                                Here are the specific rules that all the members should follow:
+                                <br />
+                                <br />
+                                Members must have to stay in discipline.
+                                <br />
+                                Members have attain the sports club regular without any fail, any
+                                specific then contact coach.
+                                <br />
+                                Members have to be in time.
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-2">
+                        <div class="div-10">
+                            <div class="div-11">Membership Rules</div>
+                            <div class="div-12">
+                                <br />
+                                Clearly outline the criteria for becoming a member.
+                                <br />
+                                Specify any fees or dues associated with membership.
+                                <br />
+                                Establish the process for joining and leaving the club.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="button-111" asp-controller="HomeController1" asp-action="Cricket1">Join Now</a>
+        </div>
+    </div>
+</body>
+</html>

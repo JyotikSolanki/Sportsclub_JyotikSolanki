@@ -1,0 +1,192 @@
+﻿
+@{
+    ViewData["Title"] = "Tabletennis1";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button1 {
+            font-family: Inter, sans-serif;
+            border-radius: 51px;
+            background-color: #1d9575;
+            margin-top: 108px;
+            justify-content: center;
+            white-space: nowrap;
+            padding: 14px 39px;
+            cursor: pointer;
+            border: none;
+            color: var(--Color, #fff);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.20s ease; /* Add transition for smooth hover effect */
+        }
+
+            .button1:hover {
+                background-color: #000000; /* Change background color on hover */
+                transition: background-color 0.20s ease;
+                color: white;
+            }
+
+        .div {
+            background-color: var(--Color, #fff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 60px;
+        }
+
+        .div-2 {
+            display: flex;
+            margin-top: 94px;
+            width: 100%;
+            max-width: 1124px;
+            flex-direction: column;
+        }
+
+        .div-3 {
+            color: #000;
+            text-align: center;
+            -webkit-text-stroke-width: 1;
+            -webkit-text-stroke-color: #000;
+            align-self: center;
+            font: 400 60px Lao Sans Pro, sans-serif;
+        }
+
+        .div-4 {
+            border-radius: 50px;
+            background-color: #aee8e5;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin: 122px 0 0 10px;
+            padding: 23px 80px 37px;
+        }
+
+        .div-5 {
+            color: #000;
+            letter-spacing: 1.05px;
+            align-self: center;
+            font: 700 35px Inter, sans-serif;
+        }
+
+        .div-6 {
+            display: flex;
+            width: 867px;
+            max-width: 100%;
+            justify-content: space-between;
+            gap: 20px;
+            color: #000;
+            font-weight: 500;
+            margin: 41px 0 0 17px;
+        }
+
+        .div-7 {
+            letter-spacing: 1.05px;
+            align-self: start;
+            flex-grow: 1;
+            flex-basis: auto;
+            font: 35px Inter, sans-serif;
+        }
+
+        .div-8 {
+            letter-spacing: 0.9px;
+            flex-grow: 1;
+            flex-basis: auto;
+            font: 30px Inter, sans-serif;
+        }
+
+        .div-9 {
+            display: flex;
+            width: 867px;
+            max-width: 100%;
+            padding-right: 17px;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 30px;
+            margin: 73px 0 0 17px;
+        }
+
+        .div-10 {
+            color: #000;
+            font-family: Inter, sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.9px;
+            align-self: start;
+            flex-grow: 1;
+            flex-basis: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="div">
+        <div class="div-2">
+            <div class="div-3">TABLETENNIS</div>
+            <div class="div-4">
+                <div class="div-5">Morning Slot</div>
+                <div class="div-6">
+                    <div class="div-7">Saturday - Sunday</div>
+                    <div class="div-8">
+                        08 : 00 am- 10 : 00 am
+                        <br />
+                        10 : 00 am - 12 : 00pm
+                    </div>
+                </div>
+                <div class="div-9">
+                    <div class="div-10">Coach - Moen Ali</div>
+                    <a class="button1" asp-controller="HomeController1" asp-action="Memberform">Join Now</a>
+                </div>
+            </div>
+            <div class="div-4">
+                <div class="div-5">Afternoon Slot</div>
+                <div class="div-6">
+                    <div class="div-7">Saturday - Sunday</div>
+                    <div class="div-8">
+                        01 : 00 pm - 03 : 00 pm
+                        <br />
+                        03 : 00 am - 05 : 00 pm
+                    </div>
+                </div>
+                <div class="div-9">
+                    <div class="div-10">Coach - Rohit Sharma</div>
+                    <a class="button1" asp-controller="HomeController1" asp-action="Memberform">Join Now</a>
+                </div>
+            </div>
+            <div class="div-4">
+                <div class="div-5">Evening Slot</div>
+                <div class="div-6">
+                    <div class="div-7">Saturday - Sunday</div>
+                    <div class="div-8">
+                        05 : 00 pm- 07 : 00 pm
+                    </div>
+                </div>
+                <div class="div-9">
+                    <div class="div-10">Coach - Virat Kholi</div>
+                    <a class="button1" asp-controller="HomeController1" asp-action="Memberform">Join Now</a>
+                </div>
+            </div>
+            <div class="div-4">
+                <div class="div-5">Night Slot</div>
+                <div class="div-6">
+                    <div class="div-7">Saturday - Sunday</div>
+                    <div class="div-8">
+                        09 : 00AM- 11 : 00AM
+                    </div>
+                </div>
+                <div class="div-9">
+                    <div class="div-10">Coach - Hardik Pandiya</div>
+                    <a class="button1" asp-controller="HomeController1" asp-action="Memberform">Join Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

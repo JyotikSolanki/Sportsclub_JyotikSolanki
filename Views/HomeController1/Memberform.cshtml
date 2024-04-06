@@ -1,0 +1,177 @@
+﻿@model Sportsclub.Models.MemberModel
+@{
+    ViewData["Title"] = "Memberform";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Club Membership Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #AEE8E5;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 80px;
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin: 30px 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="radio"] {
+            width: 500px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 5px;
+            transition: border-color 0.3s ease;
+            background-color: #fff;
+            color: #333;
+        }
+
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="date"]:focus,
+            input[type="radio"]:focus {
+                border-color: #007bff;
+            }
+
+        input[type="radio"] {
+            display: inline-block;
+            width: auto;
+            margin-top: 0;
+            margin-right: 10px;
+        }
+
+        .form-group.radio label {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .btn {
+            background-color: #064927;
+            color: #fff;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+        #confirmation-message {
+            display: none;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sports Club Membership Form</h2>
+        <div class="section">
+            <div class="section-title">Personal Information</div>
+            <form asp-controller="HomeController1" asp-action="Memberform" method="post">
+
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phoneno" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group radio">
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+                <div class="form-group radio">
+                    <label>Time:</label>
+                    <input type="radio" id="timeslot1" name="time" value="timeslot1" required>
+                    <label for="timeslot1">8:00 to 12:00</label>
+                    <input type="radio" id="timeslot2" name="time" value="timeslot2" required>
+                    <label for="timeslot2">1:00 to 5:00</label>
+                    <input type="radio" id="timeslot3" name="time" value="timeslot3" required>
+                    <label for="timeslot3">5:00 to 7:00</label>
+                </div>
+                <div class="section-title">Emergency Contact Information</div>
+                <div class="form-group">
+                    <label for="emergency-contact">Emergency Contact Name:</label>
+                    <input type="text" id="emergency-contact" name="contactname" required>
+                </div>
+                <div class="form-group">
+                    <label for="relationship">Relationship:</label>
+                    <input type="text" id="relationship" name="relationship" required>
+                </div>
+                <div class="form-group">
+                    <label for="emergency-phone">Emergency Contact Number:</label>
+                    <input type="text" id="emergency-phone" name="contactnumber" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div id="confirmation-message"></div>
+    </div>
+
+</body>
+</html>

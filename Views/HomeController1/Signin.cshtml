@@ -1,0 +1,188 @@
+﻿@model Sportsclub.Models.Signupmodel
+@{
+    ViewData["Title"] = "Signin";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div-10:hover {
+            background-color: #21a2ff;
+            color: #fff;
+        }
+
+        .div-12:hover {
+            background-color: #21a2ff;
+            color: #fff;
+        }
+
+        .div {
+            justify-content: center;
+            background-color: var(--Color, #fff);
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            color: #021102;
+            font-weight: 300;
+        }
+
+        .div-2 {
+            background-color: var(--Color, #fff);
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .div-3 {
+            background-color: #aee8e5;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 60px;
+        }
+
+        .div-4 {
+            border: 1px solid #000;
+            background-color: var(--Color, #fff);
+            display: flex;
+            width: 515px;
+            max-width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin: 167px 0 5px;
+            padding: 50px 60px;
+        }
+
+        .div-5 {
+            display: flex;
+            margin-bottom: 48px;
+            width: 285px;
+            max-width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .div-6 {
+            color: #53817e;
+            font: 400 60px Inter, sans-serif;
+            margin-bottom: 35px;
+        }
+
+        .div-7 {
+            font-family: Inter, sans-serif;
+            border-radius: 60px;
+            border: 1px solid #000;
+            align-self: stretch;
+            margin-top: 67px;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            padding: 13px 60px;
+        }
+
+        .div-8 {
+            font-family: Inter, sans-serif;
+            border-radius: 60px;
+            border: 1px solid #000;
+            align-self: stretch;
+            margin-top: 32px;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+            text-align: center;
+            padding: 7px 60px;
+        }
+
+        .div-10 {
+            border-radius: 100px;
+            border: 1px solid #000;
+            background-color: #7fcac5;
+            margin-top: 82px;
+            justify-content: center;
+            color: #0f0101;
+            white-space: nowrap;
+            text-align: center;
+            letter-spacing: 0.5px;
+            padding: 7px 43px;
+            font: 500 25px Inter, sans-serif;
+        }
+
+        .div-11 {
+            text-align: center;
+            margin-top: 45px;
+            font: 500 23px Inter, sans-serif;
+        }
+
+        .div-12 {
+            border-radius: 100px;
+            border: 1px solid #000;
+            background-color: #7fcac5;
+            white-space: nowrap;
+            margin-top: 18px;
+            justify-content: center;
+            color: #000;
+            text-align: center;
+            padding: 7px 29px;
+            font: 400 15px Inter, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="div">
+        <div class="div-2">
+            <div class="div-3">
+                <div class="div-4">
+                    <div class="div-5">
+                     <form asp-controller="HomeController1" asp-action="Signin" method="post" onsubmit="return validateForm()">
+
+                        <div class="div-6">Sign Up</div>
+                        <input type="text" class="div-8" name="firstName" id="firstName" placeholder="First Name" required>
+                        <input type="text" class="div-8" name="lastName" id="lastName" placeholder="Last Name" required>
+                        <input type="email" class="div-8" name="email" id="email" placeholder="Email" required>
+                        <input type="password" class="div-8" name="password" id="password" placeholder="Password" required>
+                        <input type="password" class="div-8" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+                        <button type="submit" class="div-10" onclick="validateForm()">Sign Up</button>
+                        <a class="div-11">Already have an account ?</a>
+                        <a class="div-12" asp-controller="HomeController1" asp-action="Login">Login</a>
+                     </form>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Basic validation example
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (firstName === '' || lastName === '' || email === '' || password === '' || confirmPassword === '') {
+                alert('Please fill in all fields.');
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return false;
+            }
+
+            // You can add more advanced validation here as needed
+
+            // If everything is valid, you can proceed with form submission
+            alert('Form submitted successfully!');
+        }
+    </script>
+
+</body>
+</html>
